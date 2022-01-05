@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+import React from 'react'
+import styled from 'styled-components/macro'
 
-import { COLORS, WEIGHTS } from '../../constants';
+import {COLORS, QUERIES, WEIGHTS} from '../../constants'
 
 const Sidebar = () => {
   return (
@@ -20,10 +20,14 @@ const Sidebar = () => {
       <Link href="/athletics">Athletics</Link>
       <Link href="/walking">Walking</Link>
     </Wrapper>
-  );
-};
+  )
+}
 
-const Wrapper = styled.aside``;
+const Wrapper = styled.aside`
+  @media ${QUERIES.tablet} {
+    display: none;
+  }
+`
 
 const Link = styled.a`
   display: block;
@@ -31,10 +35,10 @@ const Link = styled.a`
   font-weight: ${WEIGHTS.medium};
   color: ${COLORS.gray[900]};
   line-height: 2;
-`;
+`
 
 const ActiveLink = styled(Link)`
   color: ${COLORS.primary};
-`;
+`
 
-export default Sidebar;
+export default Sidebar

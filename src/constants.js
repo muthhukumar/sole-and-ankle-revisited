@@ -9,10 +9,28 @@ export const COLORS = {
   },
   primary: 'hsl(340deg 65% 47%)',
   secondary: 'hsl(240deg 60% 63%)',
-};
+}
 
 export const WEIGHTS = {
   normal: 500,
   medium: 600,
   bold: 800,
-};
+}
+
+const BREAKPOINTS = {
+  phoneMin: 37.5,
+  tabletMin: 59.375,
+  laptopMin: 81.25,
+}
+
+const QUERIES = {
+  'phone': `(max-width: ${BREAKPOINTS.phoneMin}rem)`,
+  'tablet': `(max-width: ${BREAKPOINTS.tabletMin}rem)`,
+  'laptop': `(max-width: ${BREAKPOINTS.laptopMin}rem)`,
+
+  'phoneAndUp': `(min-width: ${BREAKPOINTS.phoneMin}rem)`,
+  'tabletAndUp': `(min-width: ${BREAKPOINTS.tabletMin}rem)`,
+  'laptopAndUp': `(min-width: ${BREAKPOINTS.laptopMin}rem)`,
+}
+
+export {QUERIES}
